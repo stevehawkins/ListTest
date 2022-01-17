@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.562" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Model\" />
+    <None Remove="Prism.Forms" />
+    <None Remove="Framework\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Model\" />
+    <Folder Include="Framework\" />
+  </ItemGroup>
+</Project>
